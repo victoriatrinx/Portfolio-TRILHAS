@@ -1,6 +1,14 @@
+:root{
+    --amarelo:rgb(255, 244, 191);
+    --roxo1: rgb(255, 190, 251);
+    --roxo2: rgb(220, 149, 255);
+    --red:#a71900;
+}
+
+
 
 body {
-    background-color: #7f00b2;
+    background-color: var(--roxo2);
     margin: 0;
     min-height: 100vh;
     display: flex;
@@ -40,6 +48,9 @@ header p {
    display: flex;
    flex-direction: column;
    align-items: center;
+   border-radius: 5px;
+   border-style: dotted;
+   border-color: var(--red);
   
 }
 /* main da pág inicial */
@@ -62,7 +73,7 @@ header p {
     border-radius: 8px;
     box-shadow: 4px 4px 0 #a71900;
     transition: transform 0.15s, box-shadow 0.15s;
-    background-color: rgba(107, 63, 226, 0.644);
+    background-color: var(--roxo1);
     backdrop-filter: blur(8px);
     text-decoration: none;
     color: #000000;
@@ -77,7 +88,7 @@ header p {
 .inicio a:hover{
     background-color: rgba(161, 127, 252, 0.8);
     transform: translate(4px,4px);
-    box-shadow: 0 0 0 #a71900;
+    box-shadow: 0 0 0 var(--red);
 }
 
 
@@ -112,9 +123,10 @@ footer img {
 .projetos {
     display: flex;
     flex-wrap: wrap;
-    gap: 16px;
+    gap: 10px;
     width: 100%;
     max-width: 800px;
+    flex-direction: row;
 }
 
 .card {
@@ -126,6 +138,7 @@ footer img {
     border: 1px solid rgba(0, 0, 0, 0.5);
     border-radius: 8px;
     background: #6724c1;
+    
 }
 
 .miniatura img {
